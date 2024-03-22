@@ -107,23 +107,27 @@ public class AddUserActivity extends AppCompatActivity {
         return selectedProgram.toString();
     }
 
-    // Tutkinnon palauttelu
     private String getSelectedUserDegree() {
         StringBuilder degreeBuilder = new StringBuilder();
-        if (bcCheckBox.isChecked()) {
-            degreeBuilder.append("B.Sc., ");
-        }
-        if (msCheckBox.isChecked()) {
-            degreeBuilder.append("M.Sc., ");
+        if (phdCheckBox.isChecked()) {
+            degreeBuilder.append("Doctoral degree, ");
         }
         if (lciCheckBox.isChecked()) {
-            degreeBuilder.append("Lic., ");
+            degreeBuilder.append("Licenciate, ");
         }
-        if (phdCheckBox.isChecked()) {
-            degreeBuilder.append("Ph.D");
+        if (msCheckBox.isChecked()) {
+            degreeBuilder.append("M.Sc. degree, ");
+        }
+        if (bcCheckBox.isChecked()) {
+            degreeBuilder.append("B.Sc. degree, ");
         }
 
-        return degreeBuilder.toString().trim();
+        if (degreeBuilder.length() > 0) {
+            degreeBuilder.delete(degreeBuilder.length() - 2, degreeBuilder.length());
+        }
+        return degreeBuilder.toString();
     }
+
 }
+
 
