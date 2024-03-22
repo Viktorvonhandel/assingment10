@@ -55,7 +55,7 @@
             android:id="@+id/ceRadioButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Computional Engineering" />
+            android:text="Computational Engineering" />
 
         <RadioButton
             android:id="@+id/eeRadioButton"
